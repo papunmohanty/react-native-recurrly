@@ -1,13 +1,16 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import {Link} from "expo-router";
+import { SafeAreaView as RNSafeAreaView} from "react-native-safe-area-context";
+import { styled } from "nativewind";
+const SafeAreaView = styled(RNSafeAreaView);
 
 const SignUp = () => {
   return (
-    <View>
+    <SafeAreaView className="flex-1 bg-background p-5">
       <Text>SignUp</Text>
       <Link href="/(auth)/sign-in">Sign Up</Link>
-    </View>
+    </SafeAreaView>
   );
 };
 
